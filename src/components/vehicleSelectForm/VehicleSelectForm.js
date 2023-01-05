@@ -7,6 +7,7 @@ import {
   VEHICLE_BASE_URL,
   YEAR_LIST_BASE_URL,
 } from "../../utils/axiosConstants";
+import "./VehicleSelectForm.css";
 
 function VehicleSelectForm({ selectedVehicle, setSelectedVehicle }) {
   const [makeList, setMakeList] = useState([]);
@@ -90,6 +91,7 @@ function VehicleSelectForm({ selectedVehicle, setSelectedVehicle }) {
   return (
     <div className="VehicleSelectForm">
       <h2>Busca Tabela FIPE</h2>
+      <hr />
       <Select
         options={makeList}
         label="Marca"

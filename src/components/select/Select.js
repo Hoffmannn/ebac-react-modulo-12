@@ -1,6 +1,5 @@
 import React from "react";
-
-// import { Container } from './styles';
+import "./Select.css";
 
 function Select({ options, label, onChange, type, selectedValue }) {
   return (
@@ -9,7 +8,11 @@ function Select({ options, label, onChange, type, selectedValue }) {
       {options.length === 0 ? (
         <p>Carregando...</p>
       ) : (
-        <select onChange={(opt) => onChange(opt, type)} value={selectedValue}>
+        <select
+          onChange={(opt) => onChange(opt, type)}
+          value={selectedValue}
+          className="Select"
+        >
           <option value="" defaultChecked disabled />
           {options.map((opt) => (
             <option key={opt.codigo} value={opt.codigo}>
